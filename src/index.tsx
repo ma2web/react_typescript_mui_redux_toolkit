@@ -1,16 +1,24 @@
-import React from 'react';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+// import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import { Provider } from 'react-redux';
 import App from './App';
+import { store } from './redux/store';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
-  <React.StrictMode>
+  // <StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>
+  </Provider>
+  // </StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
